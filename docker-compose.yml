@@ -2,4 +2,11 @@ services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "8000:5000"
+  web2:
+    build: .
+    ports:
+      - "8001:5000"
+  test:
+    image: myubuntu
+    command: bash -c "sleep 300"
